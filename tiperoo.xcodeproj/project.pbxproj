@@ -12,6 +12,7 @@
 		39E6B90B1E69324A0078DCDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E6B9091E69324A0078DCDF /* Main.storyboard */; };
 		39E6B90D1E69324A0078DCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39E6B90C1E69324A0078DCDF /* Assets.xcassets */; };
 		39E6B9101E69324A0078DCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39E6B90E1E69324A0078DCDF /* LaunchScreen.storyboard */; };
+		39E6B91A1E6E964C0078DCDF /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39E6B9191E6E964C0078DCDF /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		39E6B90C1E69324A0078DCDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39E6B90F1E69324A0078DCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39E6B9111E69324A0078DCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39E6B9191E6E964C0078DCDF /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				39E6B90C1E69324A0078DCDF /* Assets.xcassets */,
 				39E6B90E1E69324A0078DCDF /* LaunchScreen.storyboard */,
 				39E6B9111E69324A0078DCDF /* Info.plist */,
+				39E6B9191E6E964C0078DCDF /* SettingViewController.swift */,
 			);
 			path = tiperoo;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				39E6B9081E69324A0078DCDF /* ViewController.swift in Sources */,
 				39E6B9061E69324A0078DCDF /* AppDelegate.swift in Sources */,
+				39E6B91A1E6E964C0078DCDF /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +304,7 @@
 				39E6B9161E69324A0078DCDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

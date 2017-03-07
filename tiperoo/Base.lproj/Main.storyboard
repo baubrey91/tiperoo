@@ -12,7 +12,7 @@
         <!--Settings-->
         <scene sceneID="IGd-H4-d0p">
             <objects>
-                <viewController id="9OO-JQ-W69" sceneMemberID="viewController">
+                <viewController id="9OO-JQ-W69" customClass="SettingsViewController" customModule="tiperoo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hxE-hW-0aX"/>
                         <viewControllerLayoutGuide type="bottom" id="DcP-wg-r8U"/>
@@ -21,12 +21,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="541-vP-cM1">
-                                <rect key="frame" x="16" y="118" width="343" height="2"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q1X-J8-7so">
+                                <rect key="frame" x="14" y="116" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </progressView>
+                                <connections>
+                                    <action selector="customValueSlider:" destination="9OO-JQ-W69" eventType="valueChanged" id="cuw-XF-tHo"/>
+                                </connections>
+                            </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Custom Percentage: 00 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhC-HH-ZuD">
-                                <rect key="frame" x="16" y="81" width="186" height="21"/>
+                                <rect key="frame" x="16" y="87" width="186" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -37,6 +40,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="j0x-yf-mlJ"/>
                     <navigationItem key="navigationItem" id="W7n-Jl-wMW"/>
+                    <connections>
+                        <outlet property="customValueLabel" destination="HhC-HH-ZuD" id="gcq-Th-ARu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boo-Ig-qJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,6 +78,7 @@
                                     <segment title="15%"/>
                                     <segment title="18%"/>
                                     <segment title="20%"/>
+                                    <segment title="Custom"/>
                                 </segments>
                                 <connections>
                                     <action selector="tipPerctSelected:" destination="pOh-cJ-ha0" eventType="valueChanged" id="2eG-SI-njL"/>
@@ -109,7 +116,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tiperoo" id="3kh-kq-RTF">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="X2r-FH-hl4">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="X2r-FH-hl4">
                             <connections>
                                 <segue destination="9OO-JQ-W69" kind="push" id="Uza-7U-PqD"/>
                             </connections>

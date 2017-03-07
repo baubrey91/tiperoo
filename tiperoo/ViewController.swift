@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var billTextBox:              UITextField!
     @IBOutlet weak var tipLabel:                UILabel!
     @IBOutlet weak var totalLabel:              UILabel!
-    var tipsArray = [0.15,0.18,0.20]
+    var tipsArray = [0.15,0.18,0.20,0.00]
     var tipPerct = 0.15
     var tip = 0.00 {
         didSet {
@@ -47,10 +47,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func test(_ sender: Any) {
-        print("pewpew")
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +69,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
+}
 
-    
+extension ViewController: settingsDelegate {
+    func setCustomTipPerc(customValue: Double) {
+        print("hello")
+    }
 }
 
