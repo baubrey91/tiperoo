@@ -9,17 +9,13 @@
 import Foundation
 import UIKit
 
-protocol settingsDelegate {
-    func setCustomTipPerc(customValue: Double)
-    
-}
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UINavigationControllerDelegate {
     
     @IBOutlet weak var customValueLabel: UILabel!
     var customValue = 0.00 {
         didSet {
-            customValueLabel.text = "Custom Percentage: \(customValue)"
+            customValueLabel.text = "Custom Percentage: \(customValue.roundTwo())"
         }
     }
     
@@ -30,5 +26,14 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.delegate = self
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        if let controller = viewController as? ViewController {
+            controller.customPerct = customValue.roundTwo()
+        }
     }
 }
