@@ -1,17 +1,17 @@
-# Pre-work - *Name of App Here*
+# Pre-work - Tiperoo
 
-**Name of your app** is a tip calculator application for iOS.
+Tiperoo is a tip calculator application for iOS.
 
-Submitted by: **Your Name Here**
+Submitted by: Brandon Aubrey
 
-Time spent: **X** hours spent in total
+Time spent: 6 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-* [ ] Settings page to change the default tip percentage.
+* [x] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [x] Settings page to change the default tip percentage.
 
 The following **optional** features are implemented:
 * [ ] UI animations
@@ -26,9 +26,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-
-<a href='https://postimg.org/image/ypp5gco2d/' target='_blank'><img src='https://s10.postimg.org/eibpo1ql5/tiperoo.gif' border='0' alt='tiperoo'/><br /><a target='_blank' href='https://postimage.org/'>imgupload</a><br /><br />
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<a href='https://postimg.org/image/rswew7ea7/' target='_blank'><img src='https://s3.postimg.org/rswew7ea7/tiperoo.gif' border='0' alt='postimage'/></a>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
