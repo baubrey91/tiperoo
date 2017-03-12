@@ -34,8 +34,8 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-
-Describe any challenges encountered while building the app.
+Did not have chance to write test's using XCTest or create app icon.
+Had trouble having permenant $ in textbox
 
 ## License
 
