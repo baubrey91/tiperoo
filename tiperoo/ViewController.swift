@@ -82,6 +82,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        billTextBox.becomeFirstResponder()
+
         if let c1 = defaults.colorForKey(key: "colorOne"), let c2 = defaults.colorForKey(key: "colorTwo") {
             //set colors
             
