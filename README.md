@@ -27,6 +27,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
+<a href='https://postimg.org/image/ypp5gco2d/' target='_blank'><img src='https://s10.postimg.org/eibpo1ql5/tiperoo.gif' border='0' alt='tiperoo'/><br /><a target='_blank' href='https://postimage.org/'>imgupload</a><br /><br />
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
