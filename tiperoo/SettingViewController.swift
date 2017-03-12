@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
     @IBOutlet weak var buttonOne:   UIButton!
     @IBOutlet weak var buttonTwo:   UIButton!
     @IBOutlet weak var slider:      UISlider!
+    @IBOutlet weak var splitStepper: UIStepper!
     
     var colorOne = UIColor(red: 223, green: 255, blue: 1, alpha: 242){
         didSet{ buttonOne.setTitleColor(colorOne, for:UIControlState()) }
@@ -72,9 +73,10 @@ class SettingsViewController: UIViewController, UINavigationControllerDelegate, 
             colorOne = c1
             colorTwo = c2
         }
-        customValue = defaults.integer(forKey: "customPerct") / 100
+        customValue = defaults.integer(forKey: "customPerct")
         split = defaults.integer(forKey: "split")
-        slider.value = Float(customValue)
+        splitStepper.value = Double(split)
+        slider.value = Float(customValue) / 100
     }
 
     @IBAction func colorPickerButton(_ sender: UIButton) {

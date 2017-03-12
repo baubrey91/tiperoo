@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var billTextBox:             UITextField!
     @IBOutlet weak var tipLabel:                UILabel!
     @IBOutlet weak var totalLabel:              UILabel!
+    @IBOutlet weak var splitLabel:              UILabel!
     @IBOutlet var background:                   BackgroundView!
     
     var customPerct: Int = 0{
@@ -24,6 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    let formatter = NumberFormatter()
     let defaults =  UserDefaults.standard
     var tipsArray = [0.15,0.18,0.20,0.00]
     var tipPerct =  0.15
@@ -33,12 +35,18 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     var tip = 0.00 {
         didSet {
-            tipLabel.text = String(tip.roundTwo())
+            tipLabel.text = formatter.string(from: tip as NSNumber)// String(tip.roundTwo())
         }
     }
     var total = 0.00 {
         didSet {
-            totalLabel.text = String(total.roundTwo())
+            totalLabel.text =  formatter.string(from: total as NSNumber) //String(total.roundTwo())
+        }
+    }
+    
+    var splitTotal = 0.00 {
+        didSet {
+            splitLabel.text =  formatter.string(from: splitTotal as NSNumber) // String(splitTotal.roundTwo())
         }
     }
     
@@ -48,6 +56,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let bill = billTextBox.text, let value = Double(bill) {
             tip = Double(value) * tipPerct
             total = Double(value) + tip
+            splitTotal = total / Double(split)
         }
     }
     
@@ -56,14 +65,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let text = textField.text, let value = Double(text) {
             tip = value * tipPerct
             total = tip + value
+            splitTotal = total / Double(split)
         } else{
             tip = 0
             total = 0
+            splitTotal = 0
         }
     }
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        formatter.minimumFractionDigits = 2
+        formatter.maximumFractionDigits = 2
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -76,6 +90,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         customPerct = defaults.integer(forKey: "customPerct")
         split = defaults.integer(forKey: "split")
+        tipPerctSelected(tipSegmentController)
     }
 
     override func didReceiveMemoryWarning() {
