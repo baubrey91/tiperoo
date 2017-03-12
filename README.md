@@ -26,10 +26,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-<a href='https://giphy.com/gifs/l4FGJci4aZy5dCuPK'><img src='https://s10.postimg.org/eibpo1ql5/tiperoo.gif' border='0' alt='tiperoo'/><br />
-<iframe src="//giphy.com/embed/l4FGJci4aZy5dCuPK" width="480" height="855" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/l4FGJci4aZy5dCuPK">via GIPHY</a></p>
-<a target='_blank' href='https://postimage.org/'>imgupload</a><br /><br />
-<a href='https://postimg.org/image/ypp5gco2d/' target='_blank'><img src='https://s3.postimg.org/rswew7ea7/tiperoo.gif' border='0' alt='postimage'/></a>
+
+<a href='https://postimg.org/image/b3sddrbzp/' target='_blank'><img src='https://s26.postimg.org/nv6jk9lrt/tiperoo.gif' border='0' alt='tiperoo'/><br /><a target='_blank' href='https://postimage.org/'>upload image free</a><br /><br />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
